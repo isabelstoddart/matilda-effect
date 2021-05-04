@@ -1,0 +1,62 @@
+[
+  {
+    "filename": "ada_lovelace.jpg",
+    "bio": "Ada Lovelace became the first computer programmer when she wrote the instructions for the first computer program. However, Charles Babbage who invented the engine her program ran on is often credited with her work.",
+    "name": "Ada Lovelace",
+    "date": "b.1815"
+  },
+  {
+    "filename": "chien.jpg",
+    "bio": "Chien-Shiung Wu developed the process for separating uranium metal while working on the Manhattan Project. Two other male physicists received credit for her work and won the Nobel Prize, while Wu received nothing.",
+    "name": "Chien-Shiung Wu",
+    "date": "b.1912"
+  },
+  {
+    "filename": "hedy_lamar.jpg",
+    "bio": "Actress Hedy Lamarr invented wireless communication but was never credited. During WWII, she developed the idea of frequency hopping but her patent was ignored by the U.S. Navy, who later used her findings to develop new technologies.",
+    "name": "Hedy Lamarr",
+    "date": "b.1914"
+  },
+  {
+    "filename": "vera_burn.jpg",
+    "bio": "Astrophysicist Vera Rubin confirmed the existence of dark matter but did not receive the Nobel Prize for her discovery.",
+    "name": "Vera Rubin",
+    "date": "b.1928"
+  },
+  {
+    "filename": "Trotula_of_Salerno.jpg",
+    "bio": "Trotula of Salerno was an Italian doctor in the 1100s. She is often called the world’s first gynecologist for her findings on women’s health. Her work is often doubted because historians remain skeptical that a woman could produce findings of such importance.",
+    "name": "Trotula of Salerno",
+    "date": "b.1040s"
+  },
+  {
+    "filename": "rosalind_franklin.jpg",
+    "bio": "Rosalind Franklin was an important contributor to the discovery of the double helix structure of DNA in 1953 but did not receive the Nobel Prize for her work, while her male colleagues did.",
+    "name": "Rosalind Franklin",
+    "date": "b.1920"
+  },
+  {
+    "filename": "maria_marien.jpg",
+    "bio": "Maria Merian was an entomologist who made significant discoveries on insect metamorphosis, however her findings were dismissed by other scientists.",
+    "name": "Maria Merian",
+    "date": "b.1647"
+  },
+  {
+    "filename": "katherine.jpg",
+    "bio": "Katherine Johnson was a “computer” for NASA who discovered the exact path for the Freedom 7 spacecraft to successfully enter space and for the Apollo 11 mission to land on the moon. She faced sex-based and racial discrimination going unrecognized for her work.",
+    "name": "Katherine Johnson",
+    "date": "b.1918"
+  },
+  {
+    "filename": "lise_meitner.jpg",
+    "bio": "Lisa Meitner’s work in nuclear physics laid the groundwork for the atomic bomb when she discovered that nuclear fission could create large amounts of energy. Her work was not recognized, and her male colleague won the Nobel Prize while she did not.",
+    "name": "Lisa Meitner",
+    "date": "b.1878"
+  },
+  {
+    "filename": "Emilie_Chatelet.jpg",
+    "bio": "Émilie du Châtelet made important contributions to Isaac Newton’s Principia where she added a 180-page commentary of Newton’s work in the language of calculus helping to articulate and popularize his theories. Newton is taught in every classroom, while Émilie is not.",
+    "name": "Émilie du Châtelet",
+    "date": "b.1706"
+  }
+ ]
