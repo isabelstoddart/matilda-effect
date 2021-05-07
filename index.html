@@ -17,7 +17,7 @@ body{
   margin: 0px auto;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #ebebeb;
-  background-image: url(./svgs/home.svg);
+  background-image: url(./svgs/preview.svg);
   background-position:top;
   background-repeat: no-repeat;
 }
@@ -25,12 +25,12 @@ body{
 h1{
     text-align: center;
     line-height: 100px;
-    font-size: 100px;
+    font-size: 80px;
     font-style: Bold;
     z-index: 1;
-    padding-top: 250px;
+    padding-top: 200px;
     font-family: Baskerville;
-    color: #4C4082;
+    color: #7951a8;
 }
 
 h1 span{
@@ -40,17 +40,20 @@ h1 span{
 h2{
   text-align: center;
   font-family: 'Lucida Grande';
-  font-size: 23px;
+  font-size: 20px;
+  padding-top: 0px;
 }
 
 h2 span{
   font-size: 35px;
-  color:#4C4082;
+  color:#7951a8;
 }
 
 h3{
+  padding-top: 20px;
   text-align: center;
   font-family: 'Lucida Grande';
+  font-size: 15px;
 }
 
 
@@ -69,7 +72,8 @@ h3{
   width: 600px;
   position: relative;
   margin: 0px auto;
-  opacity: 0;
+  /* opacity: 0; */
+  /* display: none; */
 }
 
 #sections > div{
@@ -118,12 +122,12 @@ circle{
 
 #text-break{
   margin-top: 400px;
-  height: 200px;
+  height: 600px;
   text-align: left;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 p{
@@ -215,7 +219,7 @@ a{
 
 a:hover{
   text-decoration: underline;
-  color: #4C4082;
+  color: #7951a8;
 }
 
 /* The Modal (background) */
@@ -758,8 +762,8 @@ function showModal(bio){
     .style("font-size","30px")
     .text("Scientists Included in Online Science Curriculums by Gender");
 
-    svg2.append("rect").attr("x",(width/2)-100).attr("y",90).attr("width",50).attr("height",20).attr("r", 6).style("fill", "#69b3a2")
-    svg2.append("rect").attr("x",(width/2)+25).attr("y",90).attr("width",50).attr("height",20).attr("r", 6).style("fill", "#404080")
+    svg2.append("rect").attr("x",(width/2)-100).attr("y",90).attr("width",50).attr("height",20).attr("r", 6).style("fill", "#989898")
+    svg2.append("rect").attr("x",(width/2)+25).attr("y",90).attr("width",50).attr("height",20).attr("r", 6).style("fill", "#7951a8")
     svg2.append("text").attr("x", (width/2)-45).attr("y", 100).text("Male").style("font-size", "20px").style("font-family","Lucida Grande").attr("alignment-baseline","middle")
     svg2.append("text").attr("x", (width/2)+80).attr("y", 100).text("Female").style("font-size", "20px").style("font-family","Lucida Grande").attr("alignment-baseline","middle")
 
@@ -789,7 +793,7 @@ function showModal(bio){
     // color palette = one color per subgroup
     var color = d3.scaleOrdinal()
       .domain(subgroups)
-      .range(["#69b3a2","#4C4082"])
+      .range(["#989898","#7951a8"])
 
     //stack the data? --> stack per subgroup
     var stackedData = d3.stack()
@@ -820,7 +824,7 @@ function showModal(bio){
           .attr("y", function(d) { return y(d[1]); })
           .attr("height", function(d) { return y(d[0]) - y(d[1]); })
           .attr("width",x.bandwidth())
-          .attr("stroke", "grey")
+          // .attr("stroke", "grey")
           // .on("mouseover", function(d) {
           //     var subgroupName = d3.select(this.parentNode).datum().key;
           //     var subgroupValue = d.data[subgroupName];
@@ -859,7 +863,15 @@ function showModal(bio){
     .style("text-anchor", "middle")
     .style("font-family","Lucida Grande")
     .style("font-size","30px")
-    .text("2020 Case Study on Female Role Models in STEM");
+    .text("Difference in average rating of 5 variables pertaining to STEM");
+
+    svg3.append("text")
+    .attr("x", width / 2 )
+    .attr("y", 100)
+    .style("text-anchor", "middle")
+    .style("font-family","Lucida Grande")
+    .style("font-size","25px")
+    .text("from a 2020 Case Study on Female Role Models");
 
     svg3.append("text").attr("x", (width/2)+8).attr("y", 326).text("Stereotypes").style("font-size", "11px").style("font-family","Lucida Grande").attr("alignment-baseline","middle")
     svg3.append("text").attr("x", (width/2)-68).attr("y", 176).text("Enjoyment").style("font-size", "11px").style("font-family","Lucida Grande").attr("alignment-baseline","middle")
@@ -883,7 +895,7 @@ function showModal(bio){
 
     // Y axis
     var y = d3.scaleBand()
-      .range([ 100, height-650 ])
+      .range([ 120, height-650 ])
       .domain(data.map(function(d) { return d.group; }))
       .padding(1);
     svg3.append("g")
@@ -891,6 +903,7 @@ function showModal(bio){
       .call(d3.axisLeft(y))
       .selectAll("text")
         .style("opacity",0)
+
 
     // Lines
     svg3.selectAll("myline")
@@ -946,10 +959,10 @@ function showModal(bio){
           })
           .style("stroke", function(d){
             if(d.group == valuesCaseStudy[i]) {
-              return "#247BA0"
+              return "#7951a8"
             }
             else {
-              return "black"
+              return "grey"
             }
           })
 
@@ -958,18 +971,18 @@ function showModal(bio){
           .duration(1000)
           .style("stroke", function(d) { 
             if(d.group == valuesCaseStudy[i]){
-              return "#247BA0"
+              return "#7951a8"
             }
             else {
-              return "black"
+              return "grey"
             }
           })
           .style("fill", function(d){
             if(d.group == valuesCaseStudy[i]){
-              return "#247BA0"
+              return "#7951a8"
             }
             else {
-              return "black"
+              return "grey"
             }
           })
 
@@ -986,10 +999,10 @@ function showModal(bio){
           })
           .style("fill", function(d){
             if(d.group == valuesCaseStudy[i]){
-              return "#247BA0"
+              return "#7951a8"
             }
             else {
-              return "black"
+              return "grey"
             }
           })
       })
@@ -1029,7 +1042,8 @@ function showModal(bio){
     .style("text-anchor", "middle")
     .style("font-family","Lucida Grande")
     .style("font-size","30px")
-    .text("Percent of STEM Bachelors Degrees Awarded to Women");
+    .style("padding-top", "100px")
+    .text("Percent of STEM Bachelors Degrees Awarded to Women split by Degree");
 
     svg4.append("rect").attr("x",(width/2)-480).attr("y",50).attr("width",50).attr("height",20).attr("r", 6).style("fill", "#8B6D7E")
     svg4.append("rect").attr("x",(width/2)-245).attr("y",50).attr("width",50).attr("height",20).attr("r", 6).style("fill", "#247BA0")
@@ -1169,8 +1183,8 @@ function showModal(bio){
     .text("Male vs. Female STEM Employment")
 
 
-    svg5.append("circle").attr("cx",(width/2)-70).attr("cy",90).attr("r", 6).style("fill", "#69b3a2")
-    svg5.append("circle").attr("cx",(width/2)+50).attr("cy",90).attr("r", 6).style("fill", "#404080")
+    svg5.append("circle").attr("cx",(width/2)-70).attr("cy",90).attr("r", 6).style("fill", "#989898")
+    svg5.append("circle").attr("cx",(width/2)+50).attr("cy",90).attr("r", 6).style("fill", "#7951a8")
     svg5.append("text").attr("x", (width/2)-50).attr("y", 90).text("Male").style("font-size", "20px").style("font-family","Lucida Grande").attr("alignment-baseline","middle")
     svg5.append("text").attr("x", (width/2)+70).attr("y", 90).text("Female").style("font-size", "20px").style("font-family","Lucida Grande").attr("alignment-baseline","middle")
 
@@ -1212,7 +1226,7 @@ function showModal(bio){
         .attr("cx", function(d) { return x(d.female); })
         .attr("cy", function(d) { return y(d.occupation); })
         .attr("r", "6")
-        .style("fill", "#4C4082")
+        .style("fill", "#7951a8")
 
     // Circles of variable 2
     svg5.selectAll("mycircle")
@@ -1222,7 +1236,7 @@ function showModal(bio){
         .attr("cx", function(d) { return x(d.male); })
         .attr("cy", function(d) { return y(d.occupation); })
         .attr("r", "6")
-        .style("fill", "#69b3a2")
+        .style("fill", "#989898")
     })
 
   var valuesOcc = [[],["Computer Occupations","Engineering"],[]]
