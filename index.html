@@ -14,13 +14,6 @@
 
 .mobileShow {display: none;}
 
-/* Smartphone Portrait and Landscape */
-@media only screen
-  and (min-device-width : 320px)
-  and (max-device-width : 480px){ 
-    .mobileShow {display: inline;}
-}
-
 body{
   max-width: 1200px;
   margin: 0px auto;
@@ -285,6 +278,55 @@ a:hover{
           display: inline-block;
       }
 
+@media screen and (max-width: 700px) {
+  body{
+    background-color: #ebebeb;
+    background-image: none;
+  }
+
+  .mediastop{
+    color:#7951a8;
+    font-family: Baskerville;
+    text-align: center;
+    font-size: 30px;
+    vertical-align: center;
+  }
+
+  #sections{
+    display:none;
+  }
+
+  #text-break{
+    display: none;
+  }
+
+  #image {
+    display: none;
+  }
+
+  #container {
+    display:none;
+  }
+
+  h1{
+    display:none;
+  }
+
+  h2{
+    display:none;
+  }
+
+  h3{
+    display:none;
+  }
+}
+
+@media screen and (min-width: 700px){
+  .mediastop {
+    display:none;
+  }
+}
+
 /* svg{
   background-color: #eee;
 } */
@@ -296,8 +338,10 @@ a:hover{
 
 </style>
 
-<div class="mobileShow">
-  TEXT OR IMAGE FOR MOBILE HERE
+<body>
+
+<div class="mediastop">
+  Thank you for your interest in Where Did All The Great Women Go! To experience this visualization to the fullest please visit the site on desktop.
 </div>
 
 <div id='title'>
@@ -637,6 +681,7 @@ a:hover{
   <p id="links"><span2><a href="https://github.com/isabelstoddart/msdv-thesis">Data and Methodology</a></span2><br>
   <span2><a href="https://www.isabelstoddart.com/">Isabel Stoddart</a></span2></p>
 </div>
+</body>
 
 
 
