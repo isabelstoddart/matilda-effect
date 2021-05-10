@@ -87,7 +87,7 @@ h3{
   margin-bottom: 80vh;
 }
 #sections > div:last-child{
-  margin-bottom: 30px;
+  margin-bottom: 80vh;
 }
 #sections > div.graph-scroll-active{
   opacity: 1;
@@ -405,7 +405,7 @@ a:hover{
 <div id = "text-break">
   <p>Although the stealing of women’s scientific achievements is not particularly prevalent today, the consequences of these women’s achievements going widely unnoticed is.</p>
 
-  <p>Because of these women's contributions to science going unnoticed and credited to men, when it comes to teaching students about pioneers in the science world female scientists aren't taught about nearly as much as male scientists. </p>
+  <p>Because of these women's contributions to science going unnoticed and credited to men, when it comes to teaching students about pioneers in the science world, female scientists aren't taught about nearly as much as male scientists. </p>
 </div>
 
 <div id='container' class='container-2'>
@@ -439,10 +439,11 @@ a:hover{
     <div id='graph'></div>
   
     <div id='sections'>
+
       <div>
         <p>The study found that girls enjoyment in math, perceived importance of math, expectations of success in math, and choice of going into STEM fields increased significantly after being introduced to female role models. Stereotypes around females in STEM were also shown to decrease when girls were introduced to female role models.</p>
       </div>
-  
+
       <div>
         <p>The 304 girls from 12-16 years of age were given a survey to rate these variables on a scale of 1 to 7 before and after the role model sessions. The mean rating of enjoyment in STEM (specifically Math) went up by <span>0.77</span>. <br><br>
 
@@ -667,7 +668,7 @@ a:hover{
 <div id = "text-break">
   <p>Women are represented in the STEM fields at all levels at a significantly lower rate than men.</p>
   <p>As the case study shows, being introduced to females in STEM leads girls to stronger perceptions of it and a better chance of wanting to go into it themselves.</p>
-  <p>The importance of uncovering the lost women in history lies in more than just bringing their stories to light. Learning about these woman’s contributions to STEM and teaching them to girls in grade school can influence girls positively and influence them to go into STEM themselves. Seeing more women in STEM can change the perceptions around it and put the world on a positive trajectory to increasing the amount of women in science, technology, engineering, and math.</p>
+  <p>The importance of uncovering the lost women in history lies in more than just bringing their stories to light. Learning about these women’s contributions to STEM and teaching them to girls in grade school can influence girls positively and influence them to go into STEM themselves. Seeing more women in STEM can change the perceptions around it and put the world on a positive trajectory to increasing the amount of women in science, technology, engineering, and math.</p>
 </div>
 
 <div id="container" class='container-7'>
@@ -697,7 +698,7 @@ a:hover{
 var oldWidth = 0
 function render(){
   if (oldWidth == innerWidth) return
-  oldWidth = innerWidth
+    oldWidth = innerWidth
 
   var width = height = d3.select('#graph').node().offsetWidth
  // var r = 40
@@ -824,7 +825,7 @@ function showModal(bio){
     .style("font-size","30px")
     .text("Scientists Included in Online Science Curriculums by Gender");
 
-    svg2.append("rect").attr("x",(width/2)-100).attr("y",90).attr("width",50).attr("height",20).attr("r", 6).style("fill", "#989898")
+    svg2.append("rect").attr("x",(width/2)-100).attr("y",90).attr("width",50).attr("height",20).attr("r", 6).style("fill", "#aaaaaa")
     svg2.append("rect").attr("x",(width/2)+25).attr("y",90).attr("width",50).attr("height",20).attr("r", 6).style("fill", "#7951a8")
     svg2.append("text").attr("x", (width/2)-45).attr("y", 100).text("Male").style("font-size", "20px").style("font-family","Lucida Grande").attr("alignment-baseline","middle")
     svg2.append("text").attr("x", (width/2)+80).attr("y", 100).text("Female").style("font-size", "20px").style("font-family","Lucida Grande").attr("alignment-baseline","middle")
@@ -855,7 +856,7 @@ function showModal(bio){
     // color palette = one color per subgroup
     var color = d3.scaleOrdinal()
       .domain(subgroups)
-      .range(["#989898","#7951a8"])
+      .range(["#aaaaaa","#7951a8"])
 
     //stack the data? --> stack per subgroup
     var stackedData = d3.stack()
@@ -1006,7 +1007,7 @@ function showModal(bio){
       .graph(d3.selectAll('container-3 #graph'))
       .eventId('uniqueId3')  // namespace for scroll and resize events
       .sections(d3.selectAll('.container-3 #sections > div'))
-      // .offset(innerWidth < 900 ? innerHeight - 30 : 200)
+      .offset(innerWidth < 900 ? innerHeight - 30 : 200)
       .on('active', function(i){
           svg3.selectAll("line")
           .transition()
@@ -1245,7 +1246,7 @@ function showModal(bio){
     .text("Male vs. Female STEM Employment")
 
 
-    svg5.append("circle").attr("cx",(width/2)-70).attr("cy",90).attr("r", 6).style("fill", "#989898")
+    svg5.append("circle").attr("cx",(width/2)-70).attr("cy",90).attr("r", 6).style("fill", "#aaaaaa")
     svg5.append("circle").attr("cx",(width/2)+50).attr("cy",90).attr("r", 6).style("fill", "#7951a8")
     svg5.append("text").attr("x", (width/2)-50).attr("y", 90).text("Male").style("font-size", "20px").style("font-family","Lucida Grande").attr("alignment-baseline","middle")
     svg5.append("text").attr("x", (width/2)+70).attr("y", 90).text("Female").style("font-size", "20px").style("font-family","Lucida Grande").attr("alignment-baseline","middle")
@@ -1298,7 +1299,7 @@ function showModal(bio){
         .attr("cx", function(d) { return x(d.male); })
         .attr("cy", function(d) { return y(d.occupation); })
         .attr("r", "6")
-        .style("fill", "#989898")
+        .style("fill", "#aaaaaa")
     })
 
   var valuesOcc = [[],["Computer Occupations","Engineering"],[]]
@@ -1309,7 +1310,7 @@ function showModal(bio){
       .graph(d3.selectAll('container-5 #graph'))
       .eventId('uniqueId2')  // namespace for scroll and resize events
       .sections(d3.selectAll('.container-5 #sections > div'))
-      // .offset(innerWidth < 900 ? innerHeight - 30 : 200)
+      .offset(innerWidth < 900 ? innerHeight - 30 : 200)
       .on('active', function(i){
           svg5.selectAll("line")
           .transition()
@@ -1341,7 +1342,7 @@ function showModal(bio){
 }
 
 render()
-d3.select(window).on('resize', render)
+// d3.select(window).on('resize', render)
 
 
 </script>
