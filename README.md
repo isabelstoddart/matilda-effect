@@ -1,2 +1,2 @@
 # Where Did All The Great Women Go?
-Full code for Master's thesis at Parsons School of Design
+Full code for master's thesis at Parsons School of Design
